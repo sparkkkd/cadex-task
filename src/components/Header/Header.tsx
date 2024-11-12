@@ -1,5 +1,4 @@
 import Button from '../../UI/Button/Button'
-import Container from '../../UI/Container/Container'
 import styles from './Header.module.sass'
 
 import { Link } from 'react-router-dom'
