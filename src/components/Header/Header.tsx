@@ -1,4 +1,5 @@
-import Button from '../../UI/MainButton/Button'
+import Button from '../../UI/Button/Button'
+import Container from '../../UI/Container/Container'
 import styles from './Header.module.sass'
 
 import { Link } from 'react-router-dom'
@@ -6,10 +7,12 @@ import { Link } from 'react-router-dom'
 export default function Header() {
 	return (
 		<div className={styles.container}>
-			<Link className={styles.logo} to={`/`}>
-				Some company
-			</Link>
-			<Button link='/contacts' text='Contact us' />
+			<div className={styles.wrapper}>
+				<Link className={styles.logo} to={`/`}>
+					Some company
+				</Link>
+				<Button link='/contacts' text='Contact us' />
+			</div>
 		</div>
 	)
 }
