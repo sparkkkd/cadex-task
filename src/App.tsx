@@ -5,6 +5,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Main from './pages/main/Main'
 import Contacts from './pages/contacts/Contacts'
 import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 
 function App() {
 	const location = useLocation()
@@ -16,6 +17,7 @@ function App() {
 				<Route index element={<Main />} />
 				<Route path='/contacts' element={<Contacts />} />
 			</Routes>
+			<Footer />
 		</div>
 	)
 }
