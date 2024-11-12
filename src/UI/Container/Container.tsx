@@ -1,7 +1,7 @@
 import styles from './Container.module.sass'
 
 interface ContainerProps {
-	children: JSX.Element
+	children: JSX.Element | JSX.Element[]
 }
 
 export default function Container({ children }: ContainerProps) {
