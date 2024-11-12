@@ -1,3 +1,4 @@
+import Button from '../../UI/MainButton/Button'
 import styles from './Features.module.sass'
 
 import { FEATURES } from './constant'
@@ -14,6 +15,7 @@ export default function Features() {
 					</div>
 				))}
 			</div>
+			<Button link='/contacts' text='Contact us' />
 		</div>
 	)
 }

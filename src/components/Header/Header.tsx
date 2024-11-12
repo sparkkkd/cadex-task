@@ -1,3 +1,4 @@
+import Button from '../../UI/MainButton/Button'
 import styles from './Header.module.sass'
 
 import { Link } from 'react-router-dom'
@@ -8,9 +9,7 @@ export default function Header() {
 			<Link className={styles.logo} to={`/`}>
 				Some company
 			</Link>
-			<Link className={styles.contact} to={`/contacts`}>
-				Contact us
-			</Link>
+			<Button link='/contacts' text='Contact us' />
 		</div>
 	)
 }
