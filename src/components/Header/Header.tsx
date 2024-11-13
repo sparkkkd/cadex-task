@@ -7,7 +7,7 @@ export default function Header() {
 	return (
 		<div className={styles.container}>
 			<div className={styles.wrapper}>
-				<Link className={styles.logo} to={`/`}>
+				<Link className={styles.logo} to={`/home`}>
 					Some company
 				</Link>
 				<Button link='/contacts' text='Contact us' />

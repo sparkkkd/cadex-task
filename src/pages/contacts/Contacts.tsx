@@ -45,7 +45,7 @@ export default function Contacts() {
 			setTimeout(() => {
 				console.log(`123`)
 
-				nav('/')
+				nav('/home')
 			}, 3000)
 		}
 	}, [isSuccess])

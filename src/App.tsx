@@ -14,7 +14,7 @@ function App() {
 		<div className={styles.container}>
 			<Header />
 			<Routes location={location} key={location.pathname}>
-				<Route index element={<Main />} />
+				<Route path='/home' index element={<Main />} />
 				<Route path='/contacts' element={<Contacts />} />
 			</Routes>
 			<Footer />
