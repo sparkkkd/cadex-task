@@ -19,6 +19,7 @@ const formValidationSchema = {
 }
 
 export default function Contacts() {
+	const [name, setName] = useState<string>('')
 	const nav = useNavigate()
 	const [isSuccess, setIsSuccess] = useState<boolean>(false)
 	const validationSchema = Yup.object().shape(formValidationSchema)
@@ -37,6 +38,8 @@ export default function Contacts() {
 		const result = await sendMessage(data)
 
 		if (result.ok) {
+			setName(data.name)
+			console.log(data)
 			setIsSuccess(true)
 		}
 	}
@@ -89,7 +92,7 @@ export default function Contacts() {
 							</div>
 						</>
 					) : (
-						<span className={styles.success}>Message generated on the server</span>
+						<span className={styles.success}>Thank you for your interest, {name}</span>
 					)}
 				</div>
 			</Container>
