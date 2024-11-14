@@ -8,3 +8,5 @@ framer-motion для анимаций
 
 В кач-ве сервера используется фейк апи jsponplaceholder  
 В проекте используются модульные SASS стили
+
+https://sparkkkd.github.io/cadex-task/home
