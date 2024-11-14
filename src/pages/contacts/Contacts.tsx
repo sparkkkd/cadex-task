@@ -10,6 +10,7 @@ import { IFormData } from '../../types/types'
 import { sendMessage } from '../../api/api'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import Transition from '../../UI/Transition/Transition'
 
 const formValidationSchema = {
 	name: Yup.string().required('Enter name'),
@@ -51,45 +52,47 @@ export default function Contacts() {
 	}, [isSuccess])
 
 	return (
-		<Container>
-			<div className={styles.wrapper}>
-				{!isSuccess ? (
-					<>
-						<h2 className={styles.title}>Only CTA on the page</h2>
-						<div className={styles.container}>
-							<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-								<label className={styles.label}>Name</label>
-								<input
-									className={styles.input}
-									placeholder='Enter your name...'
-									type='text'
-									{...register('name')}
-								/>
-								{errors.name && <FormErrorMessage errorMessage={errors.name?.message} />}
+		<Transition>
+			<Container>
+				<div className={styles.wrapper}>
+					{!isSuccess ? (
+						<>
+							<h2 className={styles.title}>Only CTA on the page</h2>
+							<div className={styles.container}>
+								<form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+									<label className={styles.label}>Name</label>
+									<input
+										className={styles.input}
+										placeholder='Enter your name...'
+										type='text'
+										{...register('name')}
+									/>
+									{errors.name && <FormErrorMessage errorMessage={errors.name?.message} />}
 
-								<label className={styles.label}>Email</label>
-								<input
-									className={styles.input}
-									placeholder='Enter your email...'
-									type='text'
-									{...register('email')}
-								/>
-								{errors.email && <FormErrorMessage errorMessage={errors.email?.message} />}
+									<label className={styles.label}>Email</label>
+									<input
+										className={styles.input}
+										placeholder='Enter your email...'
+										type='text'
+										{...register('email')}
+									/>
+									{errors.email && <FormErrorMessage errorMessage={errors.email?.message} />}
 
-								<label className={styles.label}>Message</label>
-								<textarea className={styles.textArea} {...register('text')} />
-								{errors.text && <FormErrorMessage errorMessage={errors.text?.message} />}
+									<label className={styles.label}>Message</label>
+									<textarea className={styles.textArea} {...register('text')} />
+									{errors.text && <FormErrorMessage errorMessage={errors.text?.message} />}
 
-								<button type='submit' className={styles.button}>
-									Submit
-								</button>
-							</form>
-						</div>
-					</>
-				) : (
-					<span className={styles.success}>Message generated on the server</span>
-				)}
-			</div>
-		</Container>
+									<button type='submit' className={styles.button}>
+										Submit
+									</button>
+								</form>
+							</div>
+						</>
+					) : (
+						<span className={styles.success}>Message generated on the server</span>
+					)}
+				</div>
+			</Container>
+		</Transition>
 	)
 }

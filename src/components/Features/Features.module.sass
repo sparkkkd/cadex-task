@@ -20,6 +20,10 @@
   row-gap: 100px
 
 .feature
+  padding: 40px
+  background-color: rgba(20, 23, 28, .3)
+  border-radius: 15px
+  border: 1px solid rgba(255, 255, 255, .3)
   flex-basis: 30%
   h4
     margin-bottom: 20px
@@ -28,6 +32,10 @@
     font-size: 18px
 
 // Media
+@media screen and ( max-width: 1000px )
+  .feature
+    padding: 20px
+
 @media screen and ( max-width: 825px )
   .title
     margin-bottom: 50px
