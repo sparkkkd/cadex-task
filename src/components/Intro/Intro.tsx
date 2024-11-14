@@ -2,8 +2,6 @@ import Container from '../../UI/Container/Container'
 import Player from '../Player/Player'
 import styles from './Intro.module.sass'
 
-import ReactPlayer from 'react-player/youtube'
-
 export default function Intro() {
 	return (
 		<Container>
@@ -16,14 +14,7 @@ export default function Intro() {
 					</article>
 				</div>
 				<div className={styles.right}>
-					{/* <ReactPlayer
-						className='react-player'
-						url={`https://www.youtube.com/watch?v=dQw4w9WgXcQ`}
-						width='100%'
-						height='100%'
-						controls
-					/> */}
-					<Player />
+					<Player url='https://www.youtube.com/watch?v=dQw4w9WgXcQ' />
 				</div>
 			</div>
 		</Container>
