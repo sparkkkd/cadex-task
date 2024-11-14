@@ -47,8 +47,6 @@ export default function Contacts() {
 	useEffect(() => {
 		if (isSuccess) {
 			setTimeout(() => {
-				console.log(`123`)
-
 				nav('/home')
 			}, 3000)
 		}
